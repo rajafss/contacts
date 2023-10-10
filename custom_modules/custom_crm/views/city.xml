@@ -1,0 +1,43 @@
+<odoo>
+  <data>
+
+        <record model="ir.ui.view" id="delegation_list">
+            <field name="name">Délégation list</field>
+            <field name="model">delegation</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name_city"/>
+                    <field name="state_id"/>
+                </tree>
+            </field>
+        </record>
+
+
+      <record id="Délégation_view_form" model="ir.ui.view">
+        <field name="name">Délégation</field>
+        <field name="model">delegation</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                     <group>
+                         <field name="name_city"/>
+                         <field name="state_id"/>
+                     </group>
+                </sheet>
+            </form>
+        </field>
+      </record>
+
+      <record model="ir.actions.act_window" id="delegation_action_window">
+          <field name="name">Délégation</field>
+          <field name="res_model">delegation</field>
+          <field name="view_mode">tree,form</field>
+      </record>
+
+      <menuitem name="Délégation"
+                id="delegation_menu_1"
+                parent="contacts.res_partner_menu_config"
+              action="delegation_action_window"
+                sequence="2"/>
+  </data>
+</odoo>

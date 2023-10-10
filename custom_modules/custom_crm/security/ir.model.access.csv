@@ -1,0 +1,14 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+
+access_delegation_user,delegation,model_delegation,base.group_user,1,0,0,0
+access_delegation,delegation,model_delegation,custom_crm.management_contacts_group,1,1,1,1
+
+access_juridique_user,forme_juridique,model_forme_juridique,base.group_user,1,0,0,0
+access_juridique,forme_juridique,model_forme_juridique,custom_crm.management_contacts_group,1,1,1,1
+
+access_res_partner,res_partner,base.model_res_partner,base.group_user,1,1,1,0
+access_res_partner,res_partner,base.model_res_partner,custom_crm.management_contacts_group,1,1,1,1
+
+
+
